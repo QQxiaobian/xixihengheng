@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="article-title">{{article.title}}</view>
+  <view class="article-meta">发布时间：{{article.createTime}}</view>
+
+  <image wx:if="{{article.coverImage}}" class="cover" src="{{article.coverImage}}" mode="widthFix" />
+
+  <view class="content">
+    <block wx:if="{{showFull}}">
+      <rich-text nodes="{{article.content}}"></rich-text>
+    </block>
+    <block wx:else>
+      <view class="abstract">{{article.summary}}</view>
+      <view class="lock-box">
+        <view class="lock-tip">本篇文章需要观看广告后解锁全文</view>
+        <button class="unlock-btn" type="primary" bindtap="watchAd">观看广告解锁全文</button>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="page-title">文章管理</view>
+
+  <button class="add-btn" type="primary" bindtap="goEdit">发布新文章</button>
+
+  <view class="article-list">
+    <block wx:for="{{articles}}" wx:key="_id">
+      <view class="article-card">
+        <view class="title">{{item.title}}</view>
+        <view class="meta">
+          {{item.isAdUnlock ? '广告解锁' : '免费阅读'}} · {{item.createTime}}
+        </view>
+        <view class="actions">
+          <button size="mini" type="primary" data-id="{{item._id}}" bindtap="goEdit">编辑</button>
+          <button size="mini" type="warn" data-id="{{item._id}}" bindtap="deleteArticle">删除</button>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view wx:if="{{articles.length === 0}}" class="empty-tip">暂无文章，点击上方按钮发布</view>
+</view>

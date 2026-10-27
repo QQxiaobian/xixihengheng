@@ -1,0 +1,36 @@
+.form-item {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.label {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 16rpx;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  font-size: 28rpx;
+  color: #444;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 200rpx;
+}
+
+.switch-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch-item .label {
+  margin-bottom: 0;
+}

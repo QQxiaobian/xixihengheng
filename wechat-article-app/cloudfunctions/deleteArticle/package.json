@@ -1,0 +1,9 @@
+{
+  "name": "deleteArticle",
+  "version": "1.0.0",
+  "description": "删除文章",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "latest"
+  }
+}

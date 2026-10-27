@@ -1,0 +1,14 @@
+.article-list {
+  margin-bottom: 24rpx;
+}
+
+.empty-tip {
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 80rpx;
+}
+
+.admin-entry {
+  margin-top: 40rpx;
+}

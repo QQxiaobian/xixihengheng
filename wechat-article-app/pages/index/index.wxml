@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="page-title">最新文章</view>
+
+  <view class="article-list">
+    <block wx:for="{{articles}}" wx:key="_id">
+      <view class="article-card" data-id="{{item._id}}" bindtap="goDetail">
+        <image wx:if="{{item.coverImage}}" class="cover" src="{{item.coverImage}}" mode="aspectFill" />
+        <view class="title">{{item.title}}</view>
+        <view class="summary">{{item.summary}}</view>
+        <view class="meta">
+          {{item.isAdUnlock ? '广告解锁' : '免费阅读'}} · {{item.createTime}}
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view wx:if="{{articles.length === 0}}" class="empty-tip">暂无文章，管理员可进入后台发布</view>
+
+  <button wx:if="{{isAdmin}}" class="admin-entry" bindtap="goAdmin" type="primary">进入管理后台</button>
+</view>

@@ -1,0 +1,9 @@
+{
+  "name": "unlockArticle",
+  "version": "1.0.0",
+  "description": "检查和记录解锁状态",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "latest"
+  }
+}

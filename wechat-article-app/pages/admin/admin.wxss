@@ -1,0 +1,21 @@
+.add-btn {
+  margin-bottom: 24rpx;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16rpx;
+}
+
+.actions button {
+  margin-left: 16rpx;
+  margin-top: 0;
+}
+
+.empty-tip {
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 80rpx;
+}
