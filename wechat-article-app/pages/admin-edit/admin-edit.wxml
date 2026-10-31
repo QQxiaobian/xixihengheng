@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="page-title">{{articleId ? '编辑文章' : '发布文章'}}</view>
+
+  <view class="form-item">
+    <text class="label">文章标题</text>
+    <input value="{{form.title}}" data-field="title" bindinput="onInput" placeholder="请输入标题" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">文章摘要</text>
+    <textarea value="{{form.summary}}" data-field="summary" bindinput="onTextareaInput" placeholder="请输入摘要，广告模式下会展示摘要" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">封面图链接</text>
+    <input value="{{form.coverImage}}" data-field="coverImage" bindinput="onInput" placeholder="https://..." />
+  </view>
+
+  <view class="form-item switch-item">
+    <text class="label">开启广告解锁</text>
+    <switch checked="{{form.isAdUnlock}}" bindchange="onSwitchChange" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">正文内容（支持富文本 HTML）</text>
+    <textarea value="{{form.content}}" data-field="content" bindinput="onTextareaInput" placeholder="请输入正文内容" />
+  </view>
+
+  <button type="primary" bindtap="save">保存</button>
+</view>
